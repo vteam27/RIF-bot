@@ -1,3 +1,4 @@
+const e = require("express");
 const RedditImageFetcher = require("reddit-image-fetcher");
 var items = 1;
 var arr;
@@ -18,29 +19,18 @@ module.exports.run = (client, message, args) => {
     items = args[1];
   }
   try {
-    for (let i = 0; i < items; i++) {
-      try {
-        RedditImageFetcher.fetch({
-          type: "custom",
-          subreddit: nameList,
-          total: 1,
-          allowNSFW: false,
+    RedditImageFetcher.fetch({
+      type: "custom",
+      subreddit: nameList,
+      total: items,
+      allowNSFW: false,
+    })
+      .then((result) => {
+          for (let i = 0; i < result.length; i++) {
+            message.channel.send({ files: [result[i].image] });
+          }
         })
-          .then((result) => {
-            console.log(result);
-            try {
-              message.channel.send({ files: [result[0].image] });
-              arr[i] = result[0].subreddit;
-            } catch (e) {
-              return;
-            }
-          });
-      } catch (e) {
-        message.channel.send("Server Crashed");
-        continue;
-      }
-    }
-  } catch (e) {
+  } catch (e){
     message.channel.send("Server Crashed");
   }
 };
