@@ -12,7 +12,8 @@ This bot was built in a [replit](https://replit.com) environment.
 - Run ! 
 
 ## Usage
-You can invite the RIF-bot to your discord server using this [invite!](https://discord.com/api/oauth2/authorize?client_id=1008103587374710854&permissions=412317178880&scope=bot)
+- First of all, go to this [replit](https://replit.com/@VaibhavTiwari7/RIF-bot) and run it.
+- Invite the RIF-bot to your discord server using this [invite!](https://discord.com/api/oauth2/authorize?client_id=1008103587374710854&permissions=412317178880&scope=bot)
 
 The command syntax for this bot is : `?fetch [subreddit] [number of images]` , where `[subreddit]` & `[number of images]` are optional parameters. Here `[subreddit]` is the name of the subreddit without any `r/` prefix.<br><br> For more details see the examples below-
 
