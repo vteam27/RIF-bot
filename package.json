@@ -1,0 +1,24 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "discord.js": "^13.9.0",
+    "express": "^4.18.1",
+    "node-fetch": "^3.2.6",
+    "random-puppy": "^1.1.0",
+    "reddit-image-fetcher": "^2.0.11"
+  },
+  "devDependencies": {
+    "node": "^16.16.0"
+  },
+  "description": ""
+}
