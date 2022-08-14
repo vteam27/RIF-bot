@@ -8,6 +8,7 @@ This bot was built in a [replit](https://replit.com) environment.
 - Go to [replit](https://replit.com) and make an account if you don't already have one.
 - Go to `create` and then select `import from github`
 - Fork this Repo and enter your forked repo's URL.
+- Make your discord bot using this [link](https://discord.com/developers/applications).
 - Enter your bot's `token` as an environment variable named `token`.
 - Run ! 
 
