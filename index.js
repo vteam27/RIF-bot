@@ -1,8 +1,19 @@
 const express = require("express");
 const app = express();
 
+app.listen("3000", function () {
+  console.log("server is running");
+});
+
+app.get("/", function (req, res) {
+  res.send(
+    "The Bot is Online!"
+  );
+});
+
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
+client.login(process.env.token);
 const fs = require("fs");
 const prefix = "?";
 client.commands = new Discord.Collection();
@@ -20,22 +31,6 @@ client.on("messageCreate", (message) => {
     const commandName = args.shift();
     const command = client.commands.get(commandName);
     if (!command) return message.channel.send("Invalid Commmand");
-    try {
       command.run(client, message, args);
-    } catch (e) {
-      command.run(client, message, args);
-    }
   }
-});
-
-client.login(process.env.token);
-
-app.listen("3000", function () {
-  console.log("server is running");
-});
-
-app.get("/", function (req, res) {
-  res.send(
-    "Bot Online."
-  );
 });

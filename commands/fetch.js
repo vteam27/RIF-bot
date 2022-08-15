@@ -1,13 +1,10 @@
-const e = require("express");
 const RedditImageFetcher = require("reddit-image-fetcher");
 var items = 1;
-var arr;
 var rawlist =
   "wallpapers/r/wallpapers/r/aesthetic/r/Photography/r/AsKPhotography/r/astrophotography/r/fashionphotography/r/filmphotography/r/wallpapers/r/CoolPics/r/AnythingYouCanTakeAPhotographOfPorn/r/wallpapers";
 
 var nameList = rawlist.split("/r/");
 
-console.log(nameList);
 module.exports.run = (client, message, args) => {
   items=1;
   nameList = rawlist.split("/r/");
